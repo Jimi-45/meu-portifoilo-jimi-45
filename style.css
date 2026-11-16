@@ -1,0 +1,509 @@
+/* =========================================
+   VARIÁVEIS DE CORES (DARK MODE TECH + VERDE)
+   ========================================= */
+:root {
+    --bg-principal: #090d16;
+    --bg-card: #111827;
+    --bg-card-hover: #162033;
+    --verde-neon: #10b981;
+    --verde-claro: #34d399;
+    --verde-suave: rgba(16, 185, 129, 0.12);
+    --texto-principal: #f8fafc;
+    --texto-secundario: #94a3b8;
+    --borda: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    overflow-x: hidden;
+}
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(9, 13, 22, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    text-decoration: none;
+}
+
+.brand-bracket {
+    color: var(--verde-neon);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--texto-principal);
+}
+
+.nav-count {
+    background: var(--verde-suave);
+    color: var(--verde-claro);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-nav {
+    background: var(--verde-neon);
+    color: #042f2e;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-nav:hover {
+    background: var(--verde-claro);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--texto-principal);
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO SECTION (PRIMEIRA DOBRA)
+   ========================================= */
+.hero {
+    padding: 5rem 1.5rem;
+    background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 50%);
+}
+
+.hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--verde-suave);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: var(--verde-claro);
+    padding: 0.45rem 1rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--verde-neon);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--verde-neon);
+}
+
+.hero-title {
+    font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+
+.hero-title span {
+    color: var(--verde-neon);
+}
+
+.hero-desc {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: var(--texto-secundario);
+    max-width: 580px;
+    margin-bottom: 2rem;
+}
+
+.hero-desc strong {
+    color: var(--texto-principal);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn-primary {
+    background: var(--verde-neon);
+    color: #042f2e;
+    padding: 0.9rem 1.75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--verde-claro);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--bg-card);
+    color: var(--texto-principal);
+    border: 1px solid var(--borda);
+    padding: 0.9rem 1.75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.btn-secondary:hover {
+    border-color: var(--verde-neon);
+}
+
+/* Métricas e Tecnologias */
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.75rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--borda);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--texto-principal);
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    color: var(--texto-secundario);
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--borda);
+}
+
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.tech-pills span {
+    background: var(--bg-card);
+    border: 1px solid var(--borda);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--verde-claro);
+}
+
+/* =========================================
+   ESPAÇO PARA SUA FOTO DE PERFIL
+   ========================================= */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+}
+
+.photo-frame {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 28px;
+    background: var(--bg-card);
+    border: 2px solid rgba(16, 185, 129, 0.35);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--verde-claro);
+    border: 2px dashed rgba(16, 185, 129, 0.4);
+    border-radius: 26px;
+}
+
+.photo-placeholder small {
+    color: var(--texto-secundario);
+    margin-top: 6px;
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: -16px;
+    left: -16px;
+    background: #0f172a;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 0.85rem 1.25rem;
+    border-radius: 14px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.code-tag { color: #38bdf8; }
+.code-num { color: var(--verde-neon); font-weight: 700; }
+
+/* =========================================
+   SEÇÃO DE PROJETOS (COM PRINTS)
+   ========================================= */
+.projects-section {
+    padding: 5rem 1.5rem;
+    background: #060910;
+    border-top: 1px solid var(--borda);
+}
+
+.section-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.section-subtitle {
+    font-family: 'Fira Code', monospace;
+    color: var(--verde-neon);
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    background: var(--bg-card);
+    color: var(--texto-secundario);
+    border: 1px solid var(--borda);
+    padding: 0.55rem 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--verde-suave);
+    color: var(--verde-claro);
+    border-color: var(--verde-neon);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(16, 185, 129, 0.4);
+}
+
+/* Espaço para as fotos/prints dos projetos */
+.project-image {
+    width: 100%;
+    height: 210px;
+    background: #1e293b;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: var(--texto-secundario);
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--borda);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 0.85rem;
+}
+
+.project-tags span {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    color: var(--verde-claro);
+    background: var(--verde-suave);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.project-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+}
+
+.project-info p {
+    font-size: 0.92rem;
+    color: var(--texto-secundario);
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.25rem;
+    border-top: 1px solid var(--borda);
+    padding-top: 1rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.project-links a:hover {
+    color: var(--verde-neon);
+}
+
+.view-all-wrapper {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-outline-green {
+    display: inline-block;
+    padding: 0.9rem 1.85rem;
+    border: 1px solid var(--verde-neon);
+}
