@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-tema="ambar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeuPortfolioJean</title>
+    <title>Jean Carlos Domiciano | Desenvolvedor Front-End</title>
+    <meta name="description" content="Portfólio de Jean Carlos Domiciano, desenvolvedor front-end. Sites responsivos, acessíveis e com código limpo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
+
     <!-- MENU DE NAVEGAÇÃO -->
     <header>
         <nav class="navbar">
-            <a href="#" class="brand">
+            <a href="#inicio" class="brand">
                 <span class="brand-bracket">&lt;</span>Jean Carlos Domiciano<span class="brand-bracket">/&gt;</span>
             </a>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio" class="nav-link">Início</a></li>
-                <li><a href="#projetos" class="nav-link">Projetos <span class="nav-count">17</span></a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
                 <li><a href="#sobre" class="nav-link">Sobre</a></li>
                 <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#contato" class="btn-nav">Falar Comigo</a>
-                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
-                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <a href="#contato" class="btn-nav">Falar comigo</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -33,11 +38,10 @@
         </nav>
     </header>
 
-    <!-- PRIMEIRA PARTE DO SITE (HERO SECTION) -->
+    <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-container">
-            
-            <!-- LADO ESQUERDO: APRESENTAÇÃO E NÚMEROS -->
+
             <div class="hero-text">
                 <div class="status-badge">
                     <span class="pulse-dot"></span> Disponível para novos projetos
@@ -48,29 +52,23 @@
                 </h1>
 
                 <p class="hero-desc">
-                    Transformo ideias e layouts em aplicações web responsivas, acessíveis e com código limpo. Experiência prática comprovada com <strong>17 projetos desenvolvidos</strong>.
+                    Transformo ideias e layouts em aplicações web responsivas, acessíveis e com código limpo. Já são <strong>17 projetos desenvolvidos</strong>.
                 </p>
 
-                <!-- Botões Principais -->
                 <div class="hero-buttons">
-                    <a href="#projetos" class="btn-primary">Explorar Projetos (17) ↓</a>
-                    <a href="https://github.com" target="_blank" class="btn-secondary">GitHub</a>
+                    <a href="#projetos" class="btn-primary">Ver projetos ↓</a>
+                    <!-- TROQUE SEU-USUARIO pelo seu usuário do GitHub -->
+                    <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
                 </div>
 
-                <!-- Indicadores / Métricas -->
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">17+</span>
-                        <span class="stat-label">Projetos Concluídos</span>
+                        <span class="stat-label">Projetos concluídos</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Design Responsivo</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-label">Stack Principal</span>
+                        <span class="stat-label">Stack principal</span>
                         <div class="tech-pills">
                             <span>HTML5</span>
                             <span>CSS3</span>
@@ -81,21 +79,18 @@
                 </div>
             </div>
 
-            <!-- LADO DIREITO: ESPAÇO PARA SUA FOTO -->
             <div class="hero-visual">
                 <div class="profile-card">
                     <div class="photo-frame">
-                        <!-- SUBSTITUA 'sua-foto.jpg' PELA SUA FOTO DE PERFIL -->
-                        <img src="img/Its-me.jpeg" alt="Foto de Perfil" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="img/Its-me.jpeg" alt="Foto de Jean Carlos Domiciano" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="photo-placeholder" style="display: none;">
                             <strong>SUA FOTO AQUI</strong>
                             <small>Recomendado: foto quadrada ou retrato</small>
                         </div>
                     </div>
 
-                    <!-- Cartão flutuante de código/experiência -->
                     <div class="floating-badge">
-                        <span class="code-tag">const</span> portfolio = <span class="code-num">17</span>;
+                        <span class="code-tag">const</span> dev = <span class="code-str">"front-end"</span>;
                     </div>
                 </div>
             </div>
@@ -103,31 +98,28 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE PROJETOS COM FILTRO E ESPAÇO PARA PRINTS -->
+    <!-- PROJETOS -->
     <section class="projects-section" id="projetos">
         <div class="section-container">
             <div class="section-header">
                 <div>
                     <span class="section-subtitle">// PORTFÓLIO</span>
-                    <h2 class="section-title">Projetos em Destaque</h2>
+                    <h2 class="section-title">Projetos em destaque</h2>
                 </div>
 
-                <!-- Filtros por categoria -->
                 <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">Destaques</button>
-                    <button class="filter-btn" data-filter="web">Sites & Landing Pages</button>
-                    <button class="filter-btn" data-filter="js">JavaScript / Apps</button>
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+                    <button class="filter-btn" data-filter="web" aria-pressed="false">Sites e landing pages</button>
+                    <button class="filter-btn" data-filter="js" aria-pressed="false">JavaScript e apps</button>
                 </div>
             </div>
 
-            <!-- Grade de Projetos -->
+            <!-- TROQUE os href="#" pelos links reais dos projetos -->
             <div class="projects-grid">
-                
-                <!-- PROJETO 1 -->
+
                 <article class="project-card" data-category="web">
                     <div class="project-image">
-                        <!-- SUBSTITUA 'projeto1.jpg' PELO PRINT DO SEU PROJETO -->
-                        <img src="projeto1.jpg" alt="Print Projeto 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="projeto1.jpg" alt="Captura de tela do site da Cooperativa EcoAmparo" width="640" height="420" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="project-placeholder" style="display: none;">PRINT DO PROJETO 1</div>
                     </div>
                     <div class="project-info">
@@ -139,17 +131,15 @@
                         <h3>Cooperativa EcoAmparo</h3>
                         <p>Site institucional responsivo com carrossel interativo, barra de busca e identidade visual sustentável.</p>
                         <div class="project-links">
-                            <a href="#" target="_blank">Ver Site ↗</a>
-                            <a href="#" target="_blank">Código GitHub</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Ver site ↗</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- PROJETO 2 -->
                 <article class="project-card" data-category="js">
                     <div class="project-image">
-                        <!-- SUBSTITUA 'projeto2.jpg' PELO PRINT DO SEU PROJETO -->
-                        <img src="projeto2.jpg" alt="Print Projeto 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="projeto2.jpg" alt="Captura de tela do Dashboard Financeiro" width="640" height="420" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="project-placeholder" style="display: none;">PRINT DO PROJETO 2</div>
                     </div>
                     <div class="project-info">
@@ -161,17 +151,15 @@
                         <h3>Dashboard Financeiro</h3>
                         <p>Aplicação web para controle de gastos com gráficos dinâmicos e armazenamento local de dados.</p>
                         <div class="project-links">
-                            <a href="#" target="_blank">Ver Site ↗</a>
-                            <a href="#" target="_blank">Código GitHub</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Ver site ↗</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- PROJETO 3 -->
                 <article class="project-card" data-category="web">
                     <div class="project-image">
-                        <!-- SUBSTITUA 'projeto3.jpg' PELO PRINT DO SEU PROJETO -->
-                        <img src="projeto3.jpg" alt="Print Projeto 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="projeto3.jpg" alt="Captura de tela da Landing Page Comercial" width="640" height="420" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="project-placeholder" style="display: none;">PRINT DO PROJETO 3</div>
                     </div>
                     <div class="project-info">
@@ -183,23 +171,128 @@
                         <h3>Landing Page Comercial</h3>
                         <p>Página de alta conversão otimizada para desempenho, SEO e navegação fluida em dispositivos móveis.</p>
                         <div class="project-links">
-                            <a href="#" target="_blank">Ver Site ↗</a>
-                            <a href="#" target="_blank">Código GitHub</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Ver site ↗</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
                         </div>
                     </div>
                 </article>
 
             </div>
 
-            <!-- Botão para ver os outros projetos -->
             <div class="view-all-wrapper">
-                <a href="https://github.com" target="_blank" class="btn-outline-green">
-                    Ver todos os 17 projetos no GitHub →
+                <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                    Ver todos os projetos no GitHub →
                 </a>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- SOBRE E HABILIDADES -->
+    <section class="about-section" id="sobre">
+        <div class="section-container about-grid">
+
+            <div class="about-text">
+                <span class="section-subtitle">// SOBRE</span>
+                <h2 class="section-title">Quem está por trás do código</h2>
+                <p>
+                    Sou desenvolvedor front-end e gosto de transformar layouts em páginas rápidas, responsivas e acessíveis, com código limpo e fácil de manter.
+                </p>
+                <!-- EDITE: conte aqui como você começou, o que está estudando e que tipo de oportunidade procura -->
+                <p>
+                    Estou sempre estudando e construindo novos projetos para praticar o que aprendo.
+                </p>
+            </div>
+
+            <div class="skills">
+                <div class="skill-group">
+                    <h3>Front-end</h3>
+                    <div class="skill-list">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Ferramentas</h3>
+                    <div class="skill-list">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <!-- ADICIONE as outras ferramentas que você usa -->
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Boas práticas</h3>
+                    <div class="skill-list">
+                        <span>Design responsivo</span>
+                        <span>Acessibilidade</span>
+                        <span>Código limpo</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact-section" id="contato">
+        <div class="section-container contact-box">
+            <span class="section-subtitle">// CONTATO</span>
+            <h2 class="section-title">Vamos conversar?</h2>
+            <p class="contact-text">Estou disponível para novos projetos e oportunidades. Fale comigo por onde preferir.</p>
+
+            <!-- TROQUE e-mail, usuário do LinkedIn e número do WhatsApp (55 + DDD + número, só dígitos) -->
+            <div class="contact-links">
+                <a href="mailto:seuemail@exemplo.com" class="btn-primary">Enviar e-mail</a>
+                <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+                <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="btn-secondary">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#inicio" class="brand">
+                    <span class="brand-bracket">&lt;</span>Jean Carlos Domiciano<span class="brand-bracket">/&gt;</span>
+                </a>
+                <p>Desenvolvedor front-end. Interfaces responsivas, acessíveis e com código limpo.</p>
+            </div>
+
+            <nav class="footer-col" aria-label="Navegação do rodapé">
+                <p class="footer-title">Navegação</p>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-col">
+                <p class="footer-title">Redes</p>
+                <ul>
+                    <li><a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:seuemail@exemplo.com">E-mail</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year">2026</span> Jean Carlos Domiciano. Todos os direitos reservados.</p>
+            <a href="#inicio">Voltar ao topo ↑</a>
+        </div>
+    </footer>
+
+    <!-- TESTE DE CORES (TEMPORÁRIO): apague este bloco, o CSS "TESTE DE CORES" e o item 5 do app.js quando escolher -->
+    <div class="theme-test" role="group" aria-label="Testar cores de destaque">
+        <button type="button" data-tema="ambar" aria-label="Âmbar" style="--c:#f59e0b"></button>
+        <button type="button" data-tema="indigo" aria-label="Índigo" style="--c:#818cf8"></button>
+        <button type="button" data-tema="verde" aria-label="Verde" style="--c:#10b981"></button>
+    </div>
+
 </body>
 </html>
